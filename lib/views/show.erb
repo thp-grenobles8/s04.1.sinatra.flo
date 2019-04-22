@@ -7,6 +7,14 @@
     <% if is_gossip %>
     Son auteur : <%= gossip[0]%> </br>
     Le contenu du potin : <%= gossip[1] %>
+    <p>Si tu veux éditer le potin clique <a href="/gossips/<%= id %>/edit">ici</a></p>
+      <form action='/gossips/<%= id %>/' method='POST'>
+      Commenter ce potin  <input type='text' name='comment'/><br/>
+      <input type='submit'/>
+      <h2>Commentaires</h2>
+      <% for i in (1...gossip[2].delete('[]').split(',').length)%>
+        <p> <%=i%> :  <%=gossip[2].delete('[]').split(',')[i].strip.capitalize%> </p>
+      <% end%>
     <% else %>
     il n'y a pas autant de potin
     <% end %>

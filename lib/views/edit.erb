@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>Éditer le potin <%= id %></title>
+  </head>
+  <body>
+    <h1>Voici la page d'édition du potin n° <%= id %> </h1>
+    <form action='/gossips/<%= id %>/edit' method='POST'>
+      Quelles sont les modifications à apporter au potin  <input type='text' name='modif'/><br/>
+      <input type='submit'/>
+  </body>
+</html>
