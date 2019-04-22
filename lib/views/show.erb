@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Voilà le potin n° <%= id%></h1>
+    <% if is_gossip %>
+    Son auteur : <%= gossip[0]%> </br>
+    Le contenu du potin : <%= gossip[1] %>
+    <% else %>
+    il n'y a pas autant de potin
+    <% end %>
+    </br>
+    <a href="/">page d'acceuil</a>
+  </body>
+</html>
